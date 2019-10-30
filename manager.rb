@@ -20,10 +20,7 @@ end
 
 class Manager < Employee
   def initialize(input_options)
-    @first_name = input_options[:first_name]
-    @last_name = input_options[:last_name]
-    @salary = input_options[:salary]
-    @active = input_options[:active]
+    super(input_options)
     @employee_names = input_options[:employee_names]
   end
 
