@@ -36,11 +36,11 @@ class Manager < Employee
     # @employees[1].give_annual_raise
 
     # While loop
-    index = 0
-    while index < @employees.length
-      @employees[index].give_annual_raise
-      index = index + 1
-    end
+    # index = 0
+    # while index < @employees.length
+    #   @employees[index].give_annual_raise
+    #   index = index + 1
+    # end
 
     # Each loop
     @employees.each do |employee|
