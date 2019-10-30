@@ -21,7 +21,7 @@ end
 class Manager < Employee
   def initialize(input_options)
     super(input_options)
-    @employee_names = input_options[:employee_names]
+    @employees = input_options[:employees]
   end
 
   def send_report
@@ -36,7 +36,13 @@ employee2 = Employee.new(first_name: "Danilo", last_name: "Campos", salary: 7000
 employee1.print_info
 employee2.print_info
 
-manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true, employee_names: ["Majora", "Danilo"])
+manager = Manager.new(
+  first_name: "Saron",
+  last_name: "Yitbarek",
+  salary: 100000,
+  active: true,
+  employees: [employee1, employee2],
+)
 manager.print_info
 manager.send_report
 p manager
