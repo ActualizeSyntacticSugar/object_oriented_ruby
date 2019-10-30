@@ -29,6 +29,24 @@ class Manager < Employee
     # code to actually send email
     puts "Email sent!"
   end
+
+  def give_all_raises
+    # Manual loop
+    # @employees[0].give_annual_raise
+    # @employees[1].give_annual_raise
+
+    # While loop
+    index = 0
+    while index < @employees.length
+      @employees[index].give_annual_raise
+      index = index + 1
+    end
+
+    # Each loop
+    @employees.each do |employee|
+      employee.give_annual_raise
+    end
+  end
 end
 
 employee1 = Employee.new({ first_name: "Majora", last_name: "Carter", salary: 80000, active: true })
@@ -45,4 +63,5 @@ manager = Manager.new(
 )
 manager.print_info
 manager.send_report
+manager.give_all_raises
 p manager
